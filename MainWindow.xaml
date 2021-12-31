@@ -6,33 +6,7 @@
         xmlns:local="clr-namespace:WindowActivationAndDeactivation"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="600">
-    <Border>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Button Grid.Row="0" Click="exportEmployeeButton_Click">to excel</Button>
-                        
-            <DataGrid Name="employeeDataGrid" Grid.Row="2"
-                AutoGenerateColumns="False"
-                SelectionMode="Single"
-                IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn
-                        Header="ID"
-                        Width="100"
-                        Binding="{Binding Path=ID}" />
-                    <DataGridTextColumn
-                        Header="성명"
-                        Width="200"
-                        Binding="{Binding Path=Name}" />
-                    <DataGridTextColumn
-                        Header="직위"
-                        Width="*"
-                        Binding="{Binding Path=Designation}" />
-                </DataGrid.Columns>
-            </DataGrid>
-        </Grid>
-    </Border>
+    <Grid>
+      
+    </Grid>
 </Window>
