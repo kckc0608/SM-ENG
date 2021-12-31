@@ -3,7 +3,7 @@
 
 using System.Windows;
 
-namespace WindowActivationAndDeactivation
+namespace SMENG
 {
     /// <summary>
     ///     Interaction logic for App.xaml

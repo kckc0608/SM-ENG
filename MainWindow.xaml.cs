@@ -16,7 +16,7 @@ using System.Reflection;
 
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace WindowActivationAndDeactivation
+namespace SMENG
 {
     /// <summary>
     ///     Interaction logic for MainWindow.xaml
