@@ -27,5 +27,17 @@ namespace SMENG
         {
             InitializeComponent();
         }
+
+        private void BOMMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            grd_BOM.Visibility = Visibility.Visible;
+            MessageBox.Show("visible");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            grd_BOM.Visibility = Visibility.Hidden;
+            MessageBox.Show("Hidden");
+        }
     }
 }

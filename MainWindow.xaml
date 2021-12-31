@@ -18,7 +18,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Background="Chartreuse">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -28,16 +28,119 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center">메뉴 리스트</Label>
-                    <Button Grid.Row="1" Margin="10,10,10,10" Padding="5,5,5,5">BOM</Button>
-                    <Button Grid.Row="2" Margin="10,10,10,10" Padding="5,5,5,5">입고</Button>
-                    <Button Grid.Row="3" Margin="10,10,10,10" Padding="5,5,5,5">거래처</Button>
+                    <Button Grid.Row="1" Margin="10,10,10,10" Padding="5,5,5,5" Click="BOMMenuButton_Click">입고 관리</Button>
+                    <Button Grid.Row="2" Margin="10,10,10,10" Padding="5,5,5,5" Click="Button_Click_1">회계 관리</Button>
+                    <Button Grid.Row="3" Margin="10,10,10,10" Padding="5,5,5,5">거래처 관리</Button>
 
                 </Grid>
             </Grid>
+            <Grid Grid.Row="1" Background="AliceBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="0">프로젝트 검색</TextBox>
+                <ListBox Grid.Row="1">
+                    <ListBoxItem>B033</ListBoxItem>
+                    <ListBoxItem>B016</ListBoxItem>
+                    <ListBoxItem>B044</ListBoxItem>
+                    <ListBoxItem>H125</ListBoxItem>
+                </ListBox>
+            </Grid>
         </Grid>
 
-        <Grid Grid.Column="1" Background="Aquamarine">
-            
+        <!--BOM 프로그램 뷰-->
+        <Grid x:Name="grd_BOM" Grid.Column="1" Background="Aquamarine" Visibility="Visible">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1" Background="AliceBlue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="{Binding ElementName=datagrid1, Path=RowHeaderWidth}" />
+                            <ColumnDefinition Width="{Binding ElementName=Column1, Path=ActualWidth}" />
+                            <ColumnDefinition Width="{Binding ElementName=Column2, Path=ActualWidth}" />
+                            <ColumnDefinition Width="{Binding ElementName=Column3, Path=ActualWidth}" />
+                            <ColumnDefinition Width="{Binding ElementName=Column4, Path=ActualWidth}" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="Black" HorizontalAlignment="Stretch" BorderThickness="1">
+                            <Label>Super Header!!</Label>
+                        </Border>
+                    </Grid>
+                    <DataGrid AutoGenerateColumns="False"
+                                Name="datagrid1" Grid.Row="1" RowHeaderWidth="10">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="column 1" Width="100" x:Name="Column1" />
+                            <DataGridTextColumn Header="column 2" Width="80" x:Name="Column2"/>
+                            <DataGridTextColumn Header="column 3" Width="80" x:Name="Column3"/>
+                            <DataGridTextColumn Header="column 4" Width="*" x:Name="Column4"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+                <DataGrid Grid.Row="1" Visibility="Hidden">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="구분"/>
+                        <DataGridTextColumn Header="파트"/>
+                        <DataGridTextColumn Header="품목코드"/>
+                        <DataGridTextColumn Header="품목명"/>
+                        <DataGridTextColumn Header="규격"/>
+                        <DataGridTextColumn Header="Maker(Mateiral)"/>
+                        <DataGridTextColumn Header="수량"/>
+                        <DataGridTextColumn Header="Remark"/>
+                        <DataGridTextColumn Header="재고"/>
+                        <DataGridTextColumn Header="입고수량"/>
+                        <DataGridTextColumn Header="부족수량"/>
+                        <DataGridTextColumn Header="단가"/>
+                        <DataGridTextColumn Header="금액"/>
+                        <DataGridTextColumn Header="발주처"/>
+                        <DataGridTextColumn Header="발주일"/>
+                        <DataGridTextColumn Header="입고예정일"/>
+                        <DataGridTextColumn Header="입고일"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+
+        <!--입고 프로그램 뷰-->
+
+        <!--거래처 프로그램 뷰-->
+        <Grid Grid.Column="1" Background="Aquamarine" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <DataGrid Grid.Row="1">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="구분"/>
+                        <DataGridTextColumn Header="파트"/>
+                        <DataGridTextColumn Header="품목코드"/>
+                        <DataGridTextColumn Header="품목명"/>
+                        <DataGridTextColumn Header="규격"/>
+                        <DataGridTextColumn Header="Maker(Mateiral)"/>
+                        <DataGridTextColumn Header="수량"/>
+                        <DataGridTextColumn Header="Remark"/>
+                        <DataGridTextColumn Header="재고"/>
+                        <DataGridTextColumn Header="입고수량"/>
+                        <DataGridTextColumn Header="부족수량"/>
+                        <DataGridTextColumn Header="단가"/>
+                        <DataGridTextColumn Header="금액"/>
+                        <DataGridTextColumn Header="발주처"/>
+                        <DataGridTextColumn Header="발주일"/>
+                        <DataGridTextColumn Header="입고예정일"/>
+                        <DataGridTextColumn Header="입고일"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
