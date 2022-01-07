@@ -174,6 +174,55 @@
                         <DataGridTextColumn Header="계좌번호" Binding="{Binding BankAccountHolder}"/>
                         <DataGridTextColumn Header="회사주소" Binding="{Binding CompanyAddress}"/>
                     </DataGrid.Columns>
+                    <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <Grid Width="Auto">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center">회사명 (회사번호, 위치)</Label>
+                                <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center">CEO</Label>
+                                    <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HorizontalContentAlignment="Center">담당자</Label>
+                                    
+                                    <Label Grid.Row="1" Grid.Column="0">홍길동</Label>
+                                    <Label Grid.Row="1" Grid.Column="1">사장</Label>
+                                    <Label Grid.Row="1" Grid.Column="2">저길동</Label>
+                                    <Label Grid.Row="1" Grid.Column="3">대리</Label>
+
+                                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center">010-1234-4321</Label>
+                                    <Label Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" HorizontalContentAlignment="Center">010-1234-5678</Label>
+
+                                    
+                                    <Label Grid.Row="0" Grid.Column="4">은행</Label>
+                                    <Label Grid.Row="1" Grid.Column="4">계좌번호</Label>
+                                    <Label Grid.Row="2" Grid.Column="4">예금주</Label>
+                                </Grid>
+                                <TextBlock Grid.Row="2" Grid.Column="0">최근 프로젝트:</TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
                 </DataGrid>
             </Grid>
         </Grid>
