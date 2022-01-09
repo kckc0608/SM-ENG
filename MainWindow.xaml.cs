@@ -106,4 +106,25 @@ namespace SMENG
         }
 
     }
+    
+    public class StoreData
+    {
+        public int Kind {get; set;}
+        public string Part {get; set;}
+        public string Code {get; set;}
+        public string Name {get; set;}
+        public int Size {get; set;}        
+        public string Maker {get; set;}
+        public string Quantity {get; set;}
+        public string Remark {get; set;}
+        public string Inventory {get; set;}
+        public string StoreQt {get; set;}    
+        public string ShortageQt {get; set;}
+        public string Price {get; set;}
+        public string WholePrice {get; set;}
+        public string Buyer {get; set;}           
+        public string BuyDate {get; set;}
+        public string ExpectedDeliveryDate {get; set;}
+        public string DeliveryDate {get; set;}
+    }
 }

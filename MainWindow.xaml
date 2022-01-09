@@ -62,23 +62,23 @@
 
                 <DataGrid Grid.Row="1" Visibility="Visible">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="구분"/>
-                        <DataGridTextColumn Header="파트"/>
-                        <DataGridTextColumn Header="품목코드"/>
-                        <DataGridTextColumn Header="품목명"/>
-                        <DataGridTextColumn Header="규격"/>
-                        <DataGridTextColumn Header="Maker(Mateiral)"/>
-                        <DataGridTextColumn Header="수량"/>
-                        <DataGridTextColumn Header="Remark"/>
-                        <DataGridTextColumn Header="재고"/>
-                        <DataGridTextColumn Header="입고수량"/>
-                        <DataGridTextColumn Header="부족수량"/>
-                        <DataGridTextColumn Header="단가"/>
-                        <DataGridTextColumn Header="금액"/>
-                        <DataGridTextColumn Header="발주처"/>
-                        <DataGridTextColumn Header="발주일"/>
-                        <DataGridTextColumn Header="입고예정일"/>
-                        <DataGridTextColumn Header="입고일"/>
+                        <DataGridTextColumn Header="구분" Binding="{Binding Kind}"/>
+                        <DataGridTextColumn Header="파트" Binding="{Binding Part}"/>
+                        <DataGridTextColumn Header="품목코드" Binding="{Binding Code}"/>
+                        <DataGridTextColumn Header="품목명" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="규격" Binding="{Binding Size}"/>
+                        <DataGridTextColumn Header="Maker(Mateiral)" Binding="{Binding Maker}"/>
+                        <DataGridTextColumn Header="수량" Binding="{Binding Quantity}"/>
+                        <DataGridTextColumn Header="Remark" Binding="{Binding Remark}"/>
+                        <DataGridTextColumn Header="재고" Binding="{Binding Inventory}"/>
+                        <DataGridTextColumn Header="입고수량" Binding="{Binding StoreQt}"/>
+                        <DataGridTextColumn Header="부족수량" Binding="{Binding ShortageQt}"/>
+                        <DataGridTextColumn Header="단가" Binding="{Binding Price}"/>
+                        <DataGridTextColumn Header="금액" Binding="{Binding WholePrice}"/>
+                        <DataGridTextColumn Header="발주처" Binding="{Binding Buyer}"/>
+                        <DataGridTextColumn Header="발주일" Binding="{Binding BuyDate}"/>
+                        <DataGridTextColumn Header="입고예정일" Binding="{Binding ExpectedDeliveryDate}"/>
+                        <DataGridTextColumn Header="입고일" Binding="{Binding DeliveryDate}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
